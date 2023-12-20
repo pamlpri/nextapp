@@ -18,7 +18,7 @@ export default function Update(props) {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     useEffect(()=>{
-        fetch(`http://localhost:9999/topics/${id}`)
+        fetch(`${process.env.NEXT_PUBLIC_API_URI}topics/${id}`)
             .then(res=>res.json())
             .then(result=>{
                 // console.log(result);
@@ -39,7 +39,7 @@ export default function Update(props) {
                     headers: { 'Content-Type' : 'application/json' },
                     body: JSON.stringify({title, body})
                 }
-                fetch(`http://localhost:9999/topics/${id}`, options)
+                fetch(`${process.env.NEXT_PUBLIC_API_URI}topics/${id}`, options)
                     .then(res=>res.json())
                     .then(result=> {
                         console.log(result);

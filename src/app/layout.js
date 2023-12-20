@@ -14,7 +14,7 @@ export default async function RootLayout({ children }) {
     1. next : revalidate: 10 => 10초동안만 캐시 유지
     2. cache: 'no-store' => 캐시를 저장하지 않는다
    */
-  const resp = await fetch('http://localhost:9999/topics', { cache: 'no-cache'}); // 요청
+  const resp = await fetch(process.env.NEXT_PUBLIC_API_URI+'topics', { cache: 'no-cache'}); // 요청
   const topics = await resp.json(); // 결과 받기
   
   

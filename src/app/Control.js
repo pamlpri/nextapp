@@ -22,7 +22,7 @@ export function Control() {
               method: 'DELETE',
               headers: {'Content-Type':'application/json'}
             }
-            fetch(`http://localhost:9999/topics/${id}`, options)
+            fetch(`${process.env.NEXT_PUBLIC_API_URI}topics/${id}`, options)
               .then(res=>res.json())
               .then(result=>{
                 console.log(result);
