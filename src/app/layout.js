@@ -34,7 +34,7 @@ export default async function RootLayout({ children }) {
         }
         </ol>
         { children }
-        {/*server component 안에서 client component로 주기 위한 절차 */}
+        {/*server component 안에서 client component를 분리하기 위한 절차 */}
         <Control />
       </body>
     </html>
