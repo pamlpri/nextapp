@@ -10,7 +10,7 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   // db.json 데이터를 읽어오기 위한 과정
   /*
-    ※ 캐시 설명
+    ※ 캐시 설정
     1. next : revalidate: 10 => 10초동안만 캐시 유지
     2. cache: 'no-store' => 캐시를 저장하지 않는다
    */
